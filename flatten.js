@@ -5,7 +5,6 @@ const eqArrays = function(arrOne, arrTwo) {
   return false;
 };
 
-
 const assertArraysEqual = function(arrOne, arrTwo) {
   if (eqArrays(arrOne, arrTwo)) {
     console.log(`✅✅✅ Assertion Passed: ${arrOne} === ${arrTwo}`);
@@ -14,18 +13,10 @@ const assertArraysEqual = function(arrOne, arrTwo) {
   }
 };
 
-
-const without = function(source, itemsToRemove) {
-  return source.filter(item => !itemsToRemove.includes(item));
+const flatten = (array) => {
+  return array.flat(2);
 };
 
+console.log(flatten([[1], [2], [3]]));
 
-// TESTS
-const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]);
-
-console.log(without(["Hello", 'world', "World", 5, 6, 7], ["world"]));
-console.log(without([5, 6, 7], [5]));
-console.log(without(["Hello World", 1, "removed"], "removed"));
-
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+assertArraysEqual([[1], [2, 3]], [[1], [2, 3]]);
