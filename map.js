@@ -30,7 +30,7 @@ const map = (array, callback) => {
   }
 
   return results;
-}
+};
 
 const words = ["ground", "control", "to", "major", "tom"];
 const numbers = [1, 3, 4, 5, 6, 8];
