@@ -7,10 +7,22 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqArrays = function(arrOne, arrTwo) {
+
   if (Array.isArray(arrOne) && Array.isArray(arrTwo)) {
-    return arrOne.every((value, index) => value === arrTwo[index]);
+  
+    for(let i = 0; i <= arrOne.length; i++){
+      if(arrOne[i] !== arrTwo[i]){
+        return false
+      }
+    }
+    
+    return true
   }
   return false;
 };
 
-assertEqual(eqArrays([1, 2, 3], "wjasdja"), false);
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true) // => true
+assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false) // => false
+
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true) // => true
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false) // => false

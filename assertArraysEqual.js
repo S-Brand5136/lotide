@@ -1,6 +1,14 @@
 const eqArrays = function(arrOne, arrTwo) {
+
   if (Array.isArray(arrOne) && Array.isArray(arrTwo)) {
-    return arrOne.every((value, index) => value === arrTwo[index]);
+  
+    for(let i = 0; i <= arrOne.length; i++){
+      if(arrOne[i] !== arrTwo[i]){
+        return false
+      }
+    }
+    
+    return true
   }
   return false;
 };
