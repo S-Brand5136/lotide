@@ -70,10 +70,10 @@ const result5 = findKey({
     firstName: "Denver",
     lastName: "Henver"
   }
-}, x => x.firstName[0] === "C");
+}, x => x.firstName[0] === "Z");
 
 assertEqual(result1, 'noma');
 assertEqual(result2, 'Ora');
 assertEqual(result3, 'elBulli');
 assertEqual(result4, 'Bob');
-assertEqual(result5, 'Student_Three');
+assertEqual(result5, undefined);
