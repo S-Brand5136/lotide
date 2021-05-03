@@ -12,5 +12,4 @@ describe('#tail.js', () => {
     const words = ["Yo Yo", "Hello", "World"];
     assert.deepEqual(tail(words), ["Hello", "World"])
   });
-
 })
