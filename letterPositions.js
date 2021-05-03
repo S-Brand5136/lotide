@@ -40,6 +40,8 @@ const letterPositions = function(sentence) {
   return results;
 };
 
+module.exports = letterPositions;
+
 const string = "picnic";
 const result = letterPositions(string);
 

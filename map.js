@@ -32,6 +32,8 @@ const map = (array, callback) => {
   return results;
 };
 
+module.exports = map;
+
 const words = ["ground", "control", "to", "major", "tom"];
 const numbers = [1, 3, 4, 5, 6, 8];
 

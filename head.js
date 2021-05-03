@@ -1,4 +1,4 @@
-const head = (array) => {;
+const head = (array) => {
   if (array.length >= 1) {
     return array[0];
   } else {

@@ -35,8 +35,8 @@ describe('#middle.js', () => {
 
   it('Should return [2] when given [1,2,3]', () => {
     const array = [1,2,3];
-    const expected = [2]
+    const expected = [2];
     assert.deepEqual(middle(array), expected);
   });
 
-})
+});

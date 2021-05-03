@@ -31,15 +31,15 @@ const eqObjects = function(object1, object2) {
 
   for (const key in object1) {
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
-      if(eqArrays(object1[key], object2[key])){
+      if (eqArrays(object1[key], object2[key])) {
         continue;
-      } 
+      }
       return false;
     } else if (typeof object1[key] === 'object' && typeof object2[key] === "object") {
-      if(eqObjects(object1[key], object2[key])){
+      if (eqObjects(object1[key], object2[key])) {
         continue;
-      };
-      return false
+      }
+      return false;
     } else if (object1[key] !== object2[key]) {
       return false;
     }
@@ -48,21 +48,22 @@ const eqObjects = function(object1, object2) {
   return true;
 };
 
+module.exports = eqObjects;
 
 
 
 // Tests primitive
-console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })) // => true
+console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => true
 
-console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })) // => false
-console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 })) // => false
+console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => false
+console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 })); // => false
 
-console.log(eqObjects({ a: { y: 0, 1: { z: 1 }, }, b: 2 }, { a: 1, b: 2 })) // => false
-console.log(eqObjects({ a: { y: 0, p: {z: [1,2,3,4], y: [1,2,3,4,5], p: 2} }, b: 2 }, ({ a: { y: 0, p: {z: [1,2,3,4,], y: [1,2,3,4,5], p: 2} }, b: 2 }))) // => true
+console.log(eqObjects({ a: { y: 0, 1: { z: 1 }, }, b: 2 }, { a: 1, b: 2 })); // => false
+console.log(eqObjects({ a: { y: 0, p: {z: [1,2,3,4], y: [1,2,3,4,5], p: 2} }, b: 2 }, ({ a: { y: 0, p: {z: [1,2,3,4,], y: [1,2,3,4,5], p: 2} }, b: 2 }))); // => true
 
-assertEqual(eqObjects({ a: { z: 1, a: {b: 2,  a: {b: 2}} }, b: 2 }, { a: { z: 1,  a: {b: 2,  a: {b: 2}} }, b: 2 }), true) // => true
+assertEqual(eqObjects({ a: { z: 1, a: {b: 2,  a: {b: 2}} }, b: 2 }, { a: { z: 1,  a: {b: 2,  a: {b: 2}} }, b: 2 }), true); // => true
 
-console.log(eqObjects({ a: { z: 1 }, b: 2, d: {c: 1} }, { a: { z: 1 }, b: 2, d: {c: 1} })) // => true
+console.log(eqObjects({ a: { z: 1 }, b: 2, d: {c: 1} }, { a: { z: 1 }, b: 2, d: {c: 1} })); // => true
 
 
 // const ab = {a: '1', b: '2'};
