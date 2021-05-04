@@ -17,14 +17,3 @@ describe('#letterPositions', () => {
   });
 
 });
-
-
-// const string = "picnic";
-// const result = letterPositions(string);
-
-// // Tests
-
-// assertArraysEqual(result['p'], [0]);
-// assertArraysEqual(result['i'], [1,4]);
-// assertArraysEqual(result['c'], [2,5]);
-// assertArraysEqual(result['n'], [3]);
