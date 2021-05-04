@@ -1,6 +1,6 @@
 {
   "name": "@s-brand5163/lotide",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a library created to mimic some of lodash's functions, for learning purposes",
   "main": "assertEqual.js",
   "directories": {
