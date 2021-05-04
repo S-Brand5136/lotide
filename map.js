@@ -13,15 +13,6 @@ const eqArrays = function(arrOne, arrTwo) {
   return false;
 };
 
-
-const assertArraysEqual = function(arrOne, arrTwo) {
-  if (eqArrays(arrOne, arrTwo)) {
-    console.log(`✅✅✅ Assertion Passed: ${arrOne} === ${arrTwo}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${arrOne} !== ${arrTwo}`);
-  }
-};
-
 const map = (array, callback) => {
   const results = [];
 
